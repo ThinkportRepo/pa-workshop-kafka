@@ -1,5 +1,6 @@
 package org.example;
 
+import digital.thinkport.Match;
 import digital.thinkport.User;
 import io.confluent.kafka.serializers.AbstractKafkaSchemaSerDeConfig;
 import io.confluent.kafka.serializers.KafkaAvroSerializer;
@@ -19,8 +20,8 @@ public class ProducerAvro {
         properties.put(AbstractKafkaSchemaSerDeConfig.SCHEMA_REGISTRY_URL_CONFIG, "http://localhost:8081");
         properties.put(AbstractKafkaSchemaSerDeConfig.AUTO_REGISTER_SCHEMAS, "true");
 
-        KafkaProducer<String, User> kafkaProducer = new KafkaProducer<>(properties);
-        kafkaProducer.send(new ProducerRecord<>("my-schema-topic",new User("test", 42,42)));
+        KafkaProducer<String, Match> kafkaProducer = new KafkaProducer<>(properties);
+        kafkaProducer.send(new ProducerRecord<>("match",new Match("Real Madrid", "Bayern München", "0", "2")));
 
         kafkaProducer.flush();
     }

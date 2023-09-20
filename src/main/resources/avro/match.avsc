@@ -1,0 +1,43 @@
+[
+  "null",
+  {
+    "connect.name": "digital.thinkport.Match",
+    "fields": [
+      {
+        "default": null,
+        "name": "firstTeam",
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      {
+        "default": null,
+        "name": "secondTeam",
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      {
+        "default": null,
+        "name": "scoreSecondTeam",
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      {
+        "default": null,
+        "name": "scoreFirstTeam",
+        "type": [
+          "null",
+          "string"
+        ]
+      }
+    ],
+    "name": "Match",
+    "namespace": "digital.thinkport",
+    "type": "record"
+  }
+]
